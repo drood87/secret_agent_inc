@@ -121,6 +121,33 @@ html {
 	width: 100%;
 }
 
+/*=======================*/
+/*Information            */
+/*=======================*/
+
+.info {
+	background-color: black;
+	padding: 1rem 0 1rem 2rem;
+}
+
+#infoSection .siteContainer {
+	display: flex;
+	justify-content: space-between;
+}
+
+.infoColumn p {
+	color: black;
+}
+
+.infoColumn {
+	width: 35%;
+}
+
+#infoSection {
+	margin-top: 3rem;
+	margin-bottom: 4rem;
+}
+
 
 
 
