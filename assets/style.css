@@ -1,8 +1,20 @@
 html {
-	font-family: "Helvetica", sans-serif;
-	width: 100%;
-	color: white;
 	font-size: 18px;
+}
+
+body {
+	font-family: "Helvetica", sans-serif;
+	color: white;
+}
+
+.siteContainer {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+h1,
+h4 {
+	font-weight: bold;
 }
 
 /*=======================*/
@@ -10,15 +22,13 @@ html {
 /*=======================*/
 
 #heading {
-	display: flex;
-	justify-content: center;
 	background-color: black;
 }
 
 #heading .siteContainer {
 	display: flex;
 	align-items: center;
-	width: 960px;
+	padding: .66rem 0 .66rem 0.5rem;
 }
 
 #logo {
@@ -27,10 +37,7 @@ html {
 	padding-right: 1rem;
 }
 
-#mainHeading {
-	font-size: 1rem;
-	padding: 0.66rem 0;
-}
+
 
 /*=======================*/
 /*Banner Section         */
@@ -46,32 +53,43 @@ html {
 
 .bannerHeading {
 	background-color: black;
-	width: 25rem;
+	width: 20rem;
 	position: relative; 
 	top: 9rem;
-}
-
-.bannerHeading h2 {
-	font-size: 1rem;
-	font-weight: bold;	
-	padding-top: 2rem;
-}
-
-.bannerHeading h3 {
-	font-size: 2rem;
-	font-weight: bold;
-	margin-top: 0.25rem;
-	padding-bottom: 3rem;
+	padding: 2rem 3rem;
 }
 
 .heading {
 	padding: 0 3rem 0 3rem;	
 }
 
-.siteContainer {
-	width: 960px;
-	margin: 0 auto;
+.bannerHeading h1 {
+	margin: 0.25rem;
+	font-size: 2rem;
+	line-height: 1.2;
 }
+
+@media only screen and (max-width: 470px) {
+	#banner {
+		height: 15rem
+	}
+
+	.bannerHeading {
+		width: 100%;
+		padding: 1rem 2rem;
+		top: 10rem;
+	}
+
+	.bannerHeading h4 {
+		font-size: .77rem;
+	}
+
+	.bannerHeading h1 {
+		font-size: 1rem;
+	}
+}
+
+
 
 /*=======================*/
 /*Navigation Bar         */
@@ -81,20 +99,38 @@ html {
 	background-color: firebrick;
 }
 
-#navbar .siteContainer {
+nav ul {
 	display: flex;
+	align-items: center;
 	justify-content: space-between;
-}
-
-.siteContainer span {
 	padding: 0.75rem 0;
 }
 
+.menu {
+	display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+	nav ul {
+		display: none;
+	}
+
+	.menu {
+		display: block;
+		text-align: center;
+	}
+}
+
 /*=======================*/
-/*Products Grid          */
+/*Products Grid & Info   */
 /*=======================*/
 
-#productGrid .siteContainer {
+.product {
+	width: 30%;
+}
+
+#productGrid,
+#infoSection {
 	display: flex;
 	justify-content: space-between;
 	margin-top: 3rem;
@@ -102,51 +138,84 @@ html {
 
 .imgWrap {
 	display: flex;
-	flex-direction: column;
+	justify-content: center;
 	align-items: center;
-	width: 30%;
 	border: 4px solid black;
-}
-
-.image {
 	height: 9rem;
-	width: 9rem;
 	padding: 2rem 0;
 }
 
+.image {
+	max-width: 8rem;
+}
+
 .descriptiveText {
+	display: block;
 	background-color: black;
 	text-align: center;
-	padding: 0.5rem 0;
-	width: 100%;
-}
-
-/*=======================*/
-/*Information            */
-/*=======================*/
-
-.info {
-	background-color: black;
-	padding: 1rem 0 1rem 2rem;
-}
-
-#infoSection .siteContainer {
-	display: flex;
-	justify-content: space-between;
-}
-
-.infoColumn p {
-	color: black;
+	padding: 0.5rem;
+	
 }
 
 .infoColumn {
 	width: 35%;
 }
 
-#infoSection {
-	margin-top: 3rem;
-	margin-bottom: 4rem;
+.infoColumn .info {
+	display: block;
+	padding: 1rem 2rem;
+	background-color: black;
 }
+
+.infoColumn p {
+	color: black;
+}
+
+#infoSection {
+	margin-bottom: 5rem;
+}
+
+@media only screen and (max-width: 1024px) {
+	.product {
+		width: 47%;
+	}
+
+	.product.sunnies {
+		display: none;
+	}
+
+	#infoSection {
+		margin-bottom: 2rem;
+	}
+}
+
+@media only screen and (max-width: 470px) {
+	.productGrid,
+	#infoSection {
+		flex-wrap: wrap;
+	}
+
+	#infoSection {
+		margin-bottom: 2rem;
+	}
+
+	.product {
+		width: 90%;
+		margin: auto;
+	}
+
+	.product.watch {
+		display: none;
+	}
+
+	.infoColumn {
+		width: 90%;
+		margin: 0.5rem auto;
+	}
+}
+
+
+
 
 /*=======================*/
 /*Footer                 */
@@ -158,6 +227,11 @@ footer {
 	background-color: black;
 	height: 5rem;
 }
+
+
+
+
+
 
 
 

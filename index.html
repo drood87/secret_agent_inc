@@ -24,8 +24,8 @@
 		<div id="banner">
 			<div class="siteContainer">
 				<div class="bannerHeading">
-					<h2 class="heading">NEW ARRIVAL</h2>
-					<h3 class="heading">SPORT BIKES AND MOTORCYCLES</h3>
+					<h4>NEW ARRIVAL</h4>
+					<h1>SPORT BIKES AND MOTORCYCLES</h1>
 				</div>
 			</div>
 		</div>
@@ -33,42 +33,54 @@
 
 	<!-- navigation -->
 	<nav id="navbar">
-		<div class="siteContainer">		
-			<span>Eyewear</span>
-			<span>Apparel</span>
-			<span>Gadgets</span>
-			<span>Vehicles</span>
-			<span>Glasses</span>
-			<span>Contact</span>
-		</div>
+		<ul class="siteContainer">		
+			<li class="navItem">Eyewear</li>
+			<li class="navItem">Apparel</li>
+			<li class="navItem">Gadgets</li>
+			<li class="navItem">Vehicles</li>
+			<li class="navItem">Glasses</li>
+			<li class="navItem">Contact</li>
+		</ul>
+		<ul class="menu siteContainer">
+			<li>Menu</li>
+		</ul>
 	</nav>
 
 	<!-- products -->
 	
-	<div id="productGrid">
-		<div class="siteContainer">
-			<div class="imgWrap">
-				<img src="./assets/images/pen.png" alt="Exploding Pen" class="image"><p class="descriptiveText">Exploding Pen</p>
+	<div class="siteContainer">
+		<div id="productGrid">
+			<div class="product">
+				<div class="imgWrap" id="penWrap">
+					<img src="./assets/images/pen.png" alt="Exploding Pen" class="image">
+					</div>
+					<p class="descriptiveText">Exploding Pen</p>
+				</div>
+			<div class="product watch">
+				<div class="imgWrap" id="cellularWatch">
+					<img src="./assets/images/watch.png" alt="Cellular Watch" class="image">
+				</div>
+				<p class="descriptiveText">Cellular Watch</p>
 			</div>
-			<div class="imgWrap">
-				<img src="./assets/images/watch.png" alt="Cellular Watch" class="image"><p class="descriptiveText">Cellular Watch</p>
-			</div>
-			<div class="imgWrap">
-				<img src="./assets/images/glasses.png" alt="Thermal Glasses" class="image"><p class="descriptiveText">Thermal Glasses</p>
+			<div class="product sunnies">
+				<div class="imgWrap" id="glasses">
+					<img src="./assets/images/glasses.png" alt="Thermal Glasses" class="image">
+				</div>
+				<p class="descriptiveText">Thermal Glasses</p>
 			</div>
 		</div>
 	</div>
 
 	<!-- Information about Location and opening hours -->
 
-	<div id="infoSection">
-		<div class="siteContainer">
+	<div class="siteContainer">
+		<div id="infoSection">
 			<div class="infoColumn">
-				<h4 class="info">Location</h4>
+				<span class="info">Location</span>
 				<p>-47.346436, 84.32354</p>
 			</div>
 			<div class="infoColumn">
-				<h4 class="info">Hours</h4>
+				<span class="info">Hours</span>
 				<p>0800 - 1800</p>
 			</div>
 		</div>
@@ -81,9 +93,6 @@
 			<p>Copyright Secret Agent Supply Inc.</p>
 		</div>
 	</footer>
-
-
-
 
 </body>
 </html>
